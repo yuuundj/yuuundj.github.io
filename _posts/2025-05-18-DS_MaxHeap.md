@@ -650,7 +650,13 @@ int main()
     // 기준 시간
     int t = 0;
     scanf("%d", &t);
-
+    // 입력 받은 시간이 1보다 작은 경우 종료
+    if (t < 1)
+    {
+        printf("잘못된 시간입니다.\n");
+        return 0;
+    }
+    
     // word_data.txt 파일 열기
     FILE *f = fopen("word_data.txt", "rt"); // read text
     if (f == NULL)
